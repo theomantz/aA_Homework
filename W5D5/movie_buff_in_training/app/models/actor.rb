@@ -21,3 +21,15 @@ class Actor < ApplicationRecord
   # class_name: "Movie"
   # primary_key: :id
 end
+
+
+# SELECT
+# *
+# FROM
+# actors
+# JOIN
+# castings ON actor_id = actors.id
+# JOIN
+# movies ON movie_id = movies.id
+# WHERE
+# title LIKE 'Pulp Fiction'

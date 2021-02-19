@@ -1,4 +1,15 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: comments
+#
+#  id                :integer          not null, primary key
+#  body              :text
+#  author_id         :integer
+#  post_id           :integer
+#  parent_comment_id :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
 
 one:
   body: MyText

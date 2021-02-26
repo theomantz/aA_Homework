@@ -1,0 +1,367 @@
+  [1m[35m (163.0ms)[0m  [1m[35mCREATE DATABASE "library_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (48.2ms)[0m  [1m[35mCREATE DATABASE "library_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3538046867491091655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBooks (20210226160910)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3538046867491091655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3538046867491091655)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBooks (20210226160910)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying NOT NULL, "author" character varying NOT NULL, "year" integer, "category" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210226160910_create_books.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210226160910"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-26 16:11:34.992961"], ["updated_at", "2021-02-26 16:11:34.992961"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3538046867491091655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/books" for ::1 at 2021-02-26 11:16:12 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/theo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as */*
+  Parameters: {"user"=>{"username"=>"chloe_obrian", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BooksController::Book):
+  
+app/controllers/books_controller.rb:4:in `index'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/theo/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/" for ::1 at 2021-02-26 12:16:13 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/theo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/theo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.5/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (15.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Robot Of Honor"], ["author", "Nanci Shields"], ["year", 1922], ["description", "Nunc pellentesque quam vel sagittis pharetra."], ["created_at", "2021-02-26 17:27:02.902369"], ["updated_at", "2021-02-26 17:27:02.902369"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Android"], ["author", "Brady Strong"], ["year", 1896], ["description", "Proin vel nibh elementum, malesuada velit id, venenatis libero."], ["created_at", "2021-02-26 17:27:02.906168"], ["updated_at", "2021-02-26 17:27:02.906168"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Invader Of Sunshine"], ["author", "Nanci Shields"], ["year", 1941], ["description", "Nullam a diam sed tellus posuere feugiat."], ["created_at", "2021-02-26 17:27:02.907879"], ["updated_at", "2021-02-26 17:27:02.907879"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Medic Of Earth"], ["author", "Tanna Wood"], ["year", 1963], ["description", "Praesent aliquam diam in pellentesque luctus."], ["created_at", "2021-02-26 17:27:02.909502"], ["updated_at", "2021-02-26 17:27:02.909502"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Emperor In The Future"], ["author", "Carletta Young"], ["year", 1901], ["description", "Pellentesque viverra mauris tristique, vulputate turpis non, eleifend tellus."], ["created_at", "2021-02-26 17:27:02.910902"], ["updated_at", "2021-02-26 17:27:02.910902"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Creator On My Ship"], ["author", "Tanna Wood"], ["year", 1923], ["description", "Nam in quam iaculis, posuere velit quis, finibus lorem."], ["created_at", "2021-02-26 17:27:02.912193"], ["updated_at", "2021-02-26 17:27:02.912193"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Martian Of Men's Legacy"], ["author", "Floretta Howe"], ["year", 1753], ["description", "Sed semper leo eget rhoncus consequat."], ["created_at", "2021-02-26 17:27:02.913672"], ["updated_at", "2021-02-26 17:27:02.913672"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Emperor In The Portal"], ["author", "Minda Santana"], ["year", 1837], ["description", "Praesent rutrum nisl sed lectus faucibus, a lacinia felis sodales."], ["created_at", "2021-02-26 17:27:02.915312"], ["updated_at", "2021-02-26 17:27:02.915312"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Woman Of Earth"], ["author", "Ranae Lyons"], ["year", 1906], ["description", "Donec placerat ipsum eleifend lacus porta, et auctor nibh mattis."], ["created_at", "2021-02-26 17:27:02.916918"], ["updated_at", "2021-02-26 17:27:02.916918"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Volunteer With A Spaceship"], ["author", "Kia Larson"], ["year", 1861], ["description", "Fusce egestas nibh ut purus vehicula, sit amet egestas dui semper."], ["created_at", "2021-02-26 17:27:02.918373"], ["updated_at", "2021-02-26 17:27:02.918373"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Medics Of Earth"], ["author", "Veronica Jensen"], ["year", 1878], ["description", "In dapibus arcu in iaculis feugiat."], ["created_at", "2021-02-26 17:27:02.919796"], ["updated_at", "2021-02-26 17:27:02.919796"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Women Of Moondust"], ["author", "Karmen Strong"], ["year", 1916], ["description", "Phasellus pellentesque sem ut fringilla porta."], ["created_at", "2021-02-26 17:27:02.920964"], ["updated_at", "2021-02-26 17:27:02.920964"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pilots From The UFO"], ["author", "Gerard Campos"], ["year", 1895], ["description", "Nam bibendum massa non metus ultricies, quis convallis mauris vulputate."], ["created_at", "2021-02-26 17:27:02.922154"], ["updated_at", "2021-02-26 17:27:02.922154"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Clones Of The Outlands"], ["author", "Lula Mueller"], ["year", 1876], ["description", "Praesent rutrum nisl sed lectus faucibus, a lacinia felis sodales."], ["created_at", "2021-02-26 17:27:02.923611"], ["updated_at", "2021-02-26 17:27:02.923611"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Androids Of New Earth"], ["author", "Mavis Young"], ["year", 1993], ["description", "Fusce egestas nibh ut purus vehicula, sit amet egestas dui semper."], ["created_at", "2021-02-26 17:27:02.925166"], ["updated_at", "2021-02-26 17:27:02.925166"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Robots Of Exploration"], ["author", "Floretta Howe"], ["year", 1789], ["description", "Nam at ante ac lectus cursus mattis id sit amet metus."], ["created_at", "2021-02-26 17:27:02.926697"], ["updated_at", "2021-02-26 17:27:02.926697"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Captains Of Exploration"], ["author", "Angela Bowman"], ["year", 1950], ["description", "Sed malesuada augue sit amet justo elementum cursus ultrices non arcu."], ["created_at", "2021-02-26 17:27:02.928107"], ["updated_at", "2021-02-26 17:27:02.928107"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Strangers Of Our Legacy"], ["author", "Lois Fletcher"], ["year", 1857], ["description", "Nulla dictum neque vitae lacus pharetra posuere."], ["created_at", "2021-02-26 17:27:02.929529"], ["updated_at", "2021-02-26 17:27:02.929529"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Robots With Tentacles"], ["author", "Melissia Swanson"], ["year", 1834], ["description", "Ut eu lacus auctor, pretium felis vel, sodales arcu."], ["created_at", "2021-02-26 17:27:02.931006"], ["updated_at", "2021-02-26 17:27:02.931006"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Androids Of The Dead"], ["author", "Vida Young"], ["year", 1868], ["description", "Donec lacinia nibh vel dolor pellentesque, in tempor quam tempor."], ["created_at", "2021-02-26 17:27:02.932486"], ["updated_at", "2021-02-26 17:27:02.932486"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Creatures And Defenders"], ["author", "Nanci Shields"], ["year", 1869], ["description", "Nam gravida velit sit amet tincidunt imperdiet."], ["created_at", "2021-02-26 17:27:02.934102"], ["updated_at", "2021-02-26 17:27:02.934102"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Creatures And Veterans"], ["author", "Floretta Howe"], ["year", 1967], ["description", "Proin a massa pellentesque, tempor mauris nec, scelerisque metus."], ["created_at", "2021-02-26 17:27:02.952232"], ["updated_at", "2021-02-26 17:27:02.952232"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Assassins And Leaders"], ["author", "Merlin York"], ["year", 1815], ["description", "Aenean a felis vestibulum, sagittis sem sed, sodales leo."], ["created_at", "2021-02-26 17:27:02.954088"], ["updated_at", "2021-02-26 17:27:02.954088"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Intruders And Androids"], ["author", "Cameron Boyer"], ["year", 1849], ["description", "Morbi vulputate risus quis metus sagittis, non bibendum justo tristique."], ["created_at", "2021-02-26 17:27:02.955722"], ["updated_at", "2021-02-26 17:27:02.955722"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Traitors And Humans"], ["author", "Ranae Lyons"], ["year", 1982], ["description", "Suspendisse sit amet mauris sit amet magna gravida sollicitudin at non velit."], ["created_at", "2021-02-26 17:27:02.957403"], ["updated_at", "2021-02-26 17:27:02.957403"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Leaders And Intruders"], ["author", "Lorie Fletcher"], ["year", 1855], ["description", "Maecenas mattis metus in suscipit euismod."], ["created_at", "2021-02-26 17:27:02.959053"], ["updated_at", "2021-02-26 17:27:02.959053"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Robots And Invaders"], ["author", "Lakiesha Good"], ["year", 1832], ["description", "Phasellus elementum dolor facilisis turpis venenatis hendrerit."], ["created_at", "2021-02-26 17:27:02.960549"], ["updated_at", "2021-02-26 17:27:02.960549"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Beasts And Hunters"], ["author", "Mavis Young"], ["year", 1964], ["description", "Curabitur blandit urna eu metus rutrum, id molestie neque tempus."], ["created_at", "2021-02-26 17:27:02.962025"], ["updated_at", "2021-02-26 17:27:02.962025"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Creatures And Directors"], ["author", "Ranae Lyons"], ["year", 2001], ["description", "Aenean rutrum ipsum sit amet arcu euismod, nec ullamcorper enim congue."], ["created_at", "2021-02-26 17:27:02.963486"], ["updated_at", "2021-02-26 17:27:02.963486"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Guardians And Defenders"], ["author", "Natasha Summers"], ["year", 1952], ["description", "Nunc consequat nulla sit amet nisi consectetur bibendum."], ["created_at", "2021-02-26 17:27:02.964986"], ["updated_at", "2021-02-26 17:27:02.964986"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Loss Of Nowhere"], ["author", "Merlin York"], ["year", 2020], ["description", "Fusce semper arcu at tempus vehicula."], ["created_at", "2021-02-26 17:27:02.966499"], ["updated_at", "2021-02-26 17:27:02.966499"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Confinement Of The Outlands"], ["author", "Brady Strong"], ["year", 1905], ["description", "Suspendisse et neque accumsan, consequat arcu sed, mollis leo."], ["created_at", "2021-02-26 17:27:02.968109"], ["updated_at", "2021-02-26 17:27:02.968109"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Confinement Of Alien Life"], ["author", "Cameron Boyer"], ["year", 1821], ["description", "Cras eget mi at ex iaculis dignissim."], ["created_at", "2021-02-26 17:27:02.969574"], ["updated_at", "2021-02-26 17:27:02.969574"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Honor"], ["author", "Anja Phelps"], ["year", 1823], ["description", "Aliquam elementum urna eu urna luctus, consequat cursus diam volutpat."], ["created_at", "2021-02-26 17:27:02.970905"], ["updated_at", "2021-02-26 17:27:02.970905"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Influence Of The Faceless Ones"], ["author", "Ranae Lyons"], ["year", 1835], ["description", "Curabitur quis metus rutrum, vehicula ex vel, aliquet mauris."], ["created_at", "2021-02-26 17:27:02.972152"], ["updated_at", "2021-02-26 17:27:02.972152"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Construction Of The Stars"], ["author", "Troy Young"], ["year", 1962], ["description", "Quisque pellentesque nunc pulvinar leo porta, nec sollicitudin est aliquet."], ["created_at", "2021-02-26 17:27:02.973511"], ["updated_at", "2021-02-26 17:27:02.973511"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Scourge Of Society"], ["author", "Lula Mueller"], ["year", 1946], ["description", "Nulla dictum metus sit amet magna mollis porta."], ["created_at", "2021-02-26 17:27:02.975058"], ["updated_at", "2021-02-26 17:27:02.975058"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Reincarnation Of War"], ["author", "Zita Boyd"], ["year", 1891], ["description", "Ut vulputate risus ut porttitor efficitur."], ["created_at", "2021-02-26 17:27:02.976832"], ["updated_at", "2021-02-26 17:27:02.976832"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Battle Of Our Future"], ["author", "Clint Boyer"], ["year", 1973], ["description", "Nullam mollis ligula et porta rhoncus."], ["created_at", "2021-02-26 17:27:02.978375"], ["updated_at", "2021-02-26 17:27:02.978375"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", " Of War"], ["author", "Vida Young"], ["year", 1860], ["description", "Phasellus dictum arcu in nisi congue, sit amet scelerisque dolor auctor."], ["created_at", "2021-02-26 17:27:02.979897"], ["updated_at", "2021-02-26 17:27:02.979897"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Puzzle Of The Legends"], ["author", "Gussie Howe"], ["year", 1893], ["description", "Donec ultrices est at lobortis interdum."], ["created_at", "2021-02-26 17:27:02.981147"], ["updated_at", "2021-02-26 17:27:02.981147"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fixed In The New Gods"], ["author", "Leeanna Summers"], ["year", 1907], ["description", "Curabitur egestas libero sit amet urna varius molestie."], ["created_at", "2021-02-26 17:27:02.982360"], ["updated_at", "2021-02-26 17:27:02.982360"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Closed For The Mists"], ["author", "Angela Bowman"], ["year", 1897], ["description", "Integer varius lorem non egestas pretium."], ["created_at", "2021-02-26 17:27:02.983714"], ["updated_at", "2021-02-26 17:27:02.983714"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (16.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Complexity Of The Depths"], ["author", "Chery Hanna"], ["year", 1773], ["description", "Curabitur a lacus nec tellus pharetra eleifend."], ["created_at", "2021-02-26 17:27:02.985209"], ["updated_at", "2021-02-26 17:27:02.985209"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Understanding The Portal"], ["author", "Clint Boyer"], ["year", 1972], ["description", "Nunc mattis tellus non libero lacinia sagittis."], ["created_at", "2021-02-26 17:27:03.003405"], ["updated_at", "2021-02-26 17:27:03.003405"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Lonely In The Immortals"], ["author", "Genie Woodard"], ["year", 1862], ["description", "Sed interdum ipsum ac dui accumsan, sit amet porta nunc commodo."], ["created_at", "2021-02-26 17:27:03.005035"], ["updated_at", "2021-02-26 17:27:03.005035"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Afraid Of The Void"], ["author", "Jennifer Santana"], ["year", 1838], ["description", "Etiam bibendum risus eu convallis varius."], ["created_at", "2021-02-26 17:27:03.006624"], ["updated_at", "2021-02-26 17:27:03.006624"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Defenseless Against My Planet"], ["author", "Kathryn Armstrong"], ["year", 1884], ["description", "Sed tristique velit ut dapibus feugiat."], ["created_at", "2021-02-26 17:27:03.008136"], ["updated_at", "2021-02-26 17:27:03.008136"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Stranger To The Troopers"], ["author", "Zelda Beasley"], ["year", 1979], ["description", "Nulla auctor ipsum ut leo tempor placerat."], ["created_at", "2021-02-26 17:27:03.009817"], ["updated_at", "2021-02-26 17:27:03.009817"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Celebrating The Eyes"], ["author", "Alecia Phelps"], ["year", 1967], ["description", "Vestibulum a lacus blandit, tempus libero vitae, volutpat dolor."], ["created_at", "2021-02-26 17:27:03.011184"], ["updated_at", "2021-02-26 17:27:03.011184"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19

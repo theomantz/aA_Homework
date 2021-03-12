@@ -9,12 +9,14 @@ const reader = readline.createInterface({
 
 // Tea and Biscuits
 function teaAndBiscuits() {
-    let first, second;
+    let first;
 
     reader.question('Would you like some tea?', (res) => {
         first = res;
-        console.log(`You replied ${first}`)
+        console.log(`You replied ${first}.`);
     });
 
-    reader.close()
+    reader.close();
 }
+
+teaAndBiscuits();

@@ -1,8 +1,8 @@
 // Require readLine Library
 
-const readLine = require('readLine');
+const readline = require('readline');
 
-const reader = readLine.createInterface({
+const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
